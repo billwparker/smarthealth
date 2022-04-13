@@ -7,6 +7,13 @@
       ret.reject();
     }
 
+
+    function titleCase(str) {
+      return str.toLowerCase().split(' ').map(function(word) {
+        return word.replace(word[0], word[0].toUpperCase());
+      }).join(' ');
+    }
+
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
@@ -51,10 +58,10 @@
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
-          p.gender = gender;
-          p.fname = fname;
-          p.lname = lname;
-          p.fullname = fullname;
+          p.gender = titleCase(gender);
+          p.fname = titleCase(fname);
+          p.lname = titleCase(lname);
+          p.fullname = titleCase(fullname);
           p.height = getQuantityValueAndUnit(height[0]);
           p.weight = getQuantityValueAndUnit(weight[0]);
 
