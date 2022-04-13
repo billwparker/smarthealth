@@ -69,6 +69,7 @@
           p.fullname = titleCase(fullname);
           p.height = getQuantityValueAndUnit(height[0]);
           p.weight = getQuantityValueAndUnit(weight[0]);
+          p.heartrate = getQuantityValueAndUnit(heartrate[0]);
 
           console.log(p.fullname);
 
@@ -106,6 +107,7 @@
       birthdate: {value: ''},
       height: {value: ''},
       weight: {value: ''},
+      heartrate: {value: ''},
       systolicbp: {value: ''},
       diastolicbp: {value: ''},
       ldl: {value: ''},
@@ -151,6 +153,7 @@
     $('#birthdate').html(p.birthdate);
     $('#height').html(p.height);
     $('#weight').html(p.weight);
+    $('#heartrate').html(p.heartrate);
     $('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
