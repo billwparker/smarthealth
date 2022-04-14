@@ -58,6 +58,8 @@
 
           console.log(heartrate);
 
+          console.log(temperature)
+
           var weight = byCodes('3141-9');
 
           console.log(weight)
