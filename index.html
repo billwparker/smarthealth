@@ -89,40 +89,53 @@
         <!--/.bg-holder-->
 
         <div class="container">
-          <h1 class="text-center"> Observational </h1>
-          <hr>
 
-          <table>
-            <tr>
-              <th>Height:&nbsp</th>
-              <td id='height'></td>
-            </tr>
-            <tr>
-              <th>Weight:&nbsp</th>
-              <td id='weight'></td>
-            </tr>
-            <tr>
-              <th>Body Temperature:&nbsp</th>
-              <td id='temperature'></td>
-            </tr>
+          <div class="row">
+            <div class="col-md-6">
 
-            <tr>
-              <th>Heart Rate:&nbsp</th>
-              <td id='heartrate'></td>
-            </tr>
-            <tr>
-              <th>Systolic Blood Pressure:&nbsp</th>
-              <td id='systolicbp'></td>
-  
-            </tr>
-            <tr>
-              <th>Diastolic Blood Pressure:&nbsp</th>
-              <td id='diastolicbp'></td>
-            </tr>
+              <h1 class="text-center"> Observational </h1>
+              <hr>
 
-          </table>
+              <table>
+                <tr>
+                  <th>Height:&nbsp</th>
+                  <td id='height'></td>
+                </tr>
+                <tr>
+                  <th>Weight:&nbsp</th>
+                  <td id='weight'></td>
+                </tr>
+                <tr>
+                  <th>Body Temperature:&nbsp</th>
+                  <td id='temperature'></td>
+                </tr>
 
-  
+                <tr>
+                  <th>Heart Rate:&nbsp</th>
+                  <td id='heartrate'></td>
+                </tr>
+                <tr>
+                  <th>Systolic Blood Pressure:&nbsp</th>
+                  <td id='systolicbp'></td>
+      
+                </tr>
+                <tr>
+                  <th>Diastolic Blood Pressure:&nbsp</th>
+                  <td id='diastolicbp'></td>
+                </tr>
+
+              </table>
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div id="weight-chart" style="width:90%; height:250px;"></div>
+
+            </div>
+
+          </div>
+
         </div><!-- end of .container-->
 
       </section>
@@ -321,9 +334,6 @@
     <script src="assets/js/theme.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">
-
-
-    <div id="weight-chart" style="width:90%; height:250px;"></div>
 
   </body>
 
