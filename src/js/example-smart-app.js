@@ -77,6 +77,8 @@
 
           console.log(weight)
 
+          var weights = getWeights(weight)
+
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = titleCase(gender);
@@ -122,8 +124,22 @@
               type: 'scatter'
             }
           ];
+
+          var layout = {
+            title: 'Weight',
+            // xaxis: {
+            //   fixedrange: fixed,
+            //   tickformat: 'd'
+            // },
+            // yaxis: {
+            //   fixedrange: fixed,
+            //   range: y1
+            // },
+            paper_bgcolor: "whitesmoke",
+          }    
+        
           
-          Plotly.newPlot('weight-chart', data);
+          Plotly.newPlot('weight-chart', data, layout, {displayModeBar: false});
           //--------------------------------------
 
           ret.resolve(p);
@@ -190,6 +206,34 @@
       //return undefined;
     }
   }
+
+  function getWeights(wgts) {
+
+    console.log(wgts);
+
+    var w = wgts.map(item => {
+
+      if ('effectiveDateTime' in item)
+        v = item['effectiveDateTime']  
+
+      return v;
+    });    
+  
+    var z = wgts.map(item => {
+
+      if ('valueQuantity' in item)
+        v = item['valueQuantity']['value']
+      return v;
+    });  
+    
+    r.push(w);
+    r.push(z);
+
+    console.log(r);
+
+    return r;
+  }
+
 
   window.drawVisualization = function(p) {
     $('#holder').show();
