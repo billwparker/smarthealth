@@ -16,6 +16,9 @@
 
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
+
+        document.getElementById('main-wait').style.display = "block"  
+
         var patient = smart.patient;
         var pt = patient.read();
         var obv = smart.patient.api.fetchAll({
@@ -100,6 +103,10 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
+          document.getElementById('greeting').style.display = "block"  
+          document.getElementById('demo-table').style.display = "block"  
+          document.getElementById('main-wait').style.display = "none"  
+
           ret.resolve(p);
         });
       } else {
@@ -157,7 +164,9 @@
         typeof ob.valueQuantity.unit != 'undefined') {
           return ob.valueQuantity.value + ' ' + ob.valueQuantity.unit;
     } else {
-      return undefined;
+
+      return "-";
+      //return undefined;
     }
   }
 

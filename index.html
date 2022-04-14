@@ -41,17 +41,20 @@
           <div class="row align-items-center">
             <div class="col-md-6 text-md-start text-center py-6">
               <div class="mb-4 fs-9 fw-bold">
-              <h1>Health Dashboard</h1>
+              <div>
+              Health Dashboard
+              </div>
               <!-- <h5>Your health all in one place</h5> -->
               </div>
 
               <p class="mb-6 lead text-secondary">
-              <h3><span id="fname"></span>, we are glad you are here!
-              <br></h3>
-
+              <span><img id="main-wait" style="display: inline-block;" src="assets/img/wait.gif" alt="Please wait ..." width=41 height=41> Loading ...</span>
+              <h3 id="greeting" style="display: none;"><span id="fname"></span>, we are glad you are here!
+              </h3>
+              <br>
               <br>
 
-              <table>
+              <table id="demo-table" style="display: none;">
                 <tr>
                   <th>Name: </th>
                   <td id='fullname'></td>
