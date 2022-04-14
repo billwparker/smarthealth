@@ -29,7 +29,7 @@
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4', 'http://loinc.org|3141-9',
                               'http://loinc.org|8867-4', 'http://loinc.org|8310-5', 'http://loinc.org|2160-0',
-                              'http://loinc.org|718-7', 'http://loinc.org|2345-7'
+                              'http://loinc.org|718-7', 'http://loinc.org|2345-7', 'http://loinc.org|2823-3'
                             ]
                       }
                     }
@@ -62,6 +62,7 @@
           var creatinine = byCodes('2160-0');
           var hemoglobin = byCodes('718-7');
           var glucose = byCodes('2345-7');
+          var potassium = byCodes('2823-3');
 
           console.log(heartrate);
 
@@ -87,6 +88,7 @@
           p.creatinine = getQuantityValueAndUnit(creatinine[0]);
           p.hemoglobin = getQuantityValueAndUnit(hemoglobin[0]);
           p.glucose = getQuantityValueAndUnit(glucose[0]);
+          p.potassium = getQuantityValueAndUnit(potassium[0]);
 
           console.log(p.fullname);
 
@@ -137,6 +139,7 @@
       creatinine: {value: ''},
       hemoglobin: {value: ''},
       glucose: {value: ''},
+      potassium: {value: ''},
     };
   }
 
@@ -189,6 +192,7 @@
     $('#creatinine').html(p.creatinine);
     $('#hemoglobin').html(p.hemoglobin);
     $('#glucose').html(p.glucose);
+    $('#potassium').html(p.potassium);
   };
 
 })(window);
