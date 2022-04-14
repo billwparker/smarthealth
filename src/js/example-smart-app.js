@@ -225,7 +225,8 @@
         v = item['valueQuantity']['value']
       return v;
     });  
-    
+
+    r = [];
     r.push(w);
     r.push(z);
 
