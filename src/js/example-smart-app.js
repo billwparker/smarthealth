@@ -64,6 +64,9 @@
 
           console.log(temperature)
 
+          console.log(hemoglobin);
+          console.log(glucose)
+
           var weight = byCodes('3141-9');
 
           console.log(weight)
