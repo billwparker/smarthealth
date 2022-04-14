@@ -25,7 +25,7 @@
                         $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4', 'http://loinc.org|3141-9',
-                              'http://loinc.org|8867-4', 'http://loinc.org|8310-5',
+                              'http://loinc.org|8867-4', 'http://loinc.org|8310-5', 'http://loinc.org|2160-0'
                             ]
                       }
                     }
@@ -55,6 +55,7 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
           var temperature = byCodes('8310-5');
+          var creatinine = byCodes('2160-0');
 
           console.log(heartrate);
 
@@ -74,6 +75,7 @@
           p.temperature = getQuantityValueAndUnit(temperature[0]);
           p.weight = getQuantityValueAndUnit(weight[0]);
           p.heartrate = getQuantityValueAndUnit(heartrate[0]);
+          p.creatinine = getQuantityValueAndUnit(creatinine[0]);
 
           console.log(p.fullname);
 
@@ -117,6 +119,7 @@
       ldl: {value: ''},
       hdl: {value: ''},
       temperature: {value: ''},
+      creatinine: {value: ''},
     };
   }
 
@@ -164,6 +167,7 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#temperature').html(p.temperature);
+    $('#creatinine').html(p.creatinine);
   };
 
 })(window);
