@@ -63,7 +63,7 @@
             console.log(patient.telecom)
             console.log(patient.telecom[0].period)
             console.log(patient.telecom[0].value)
-            phoneNumber = patient.telecom[0].value;
+            phoneNumber = formatPhoneNumber(patient.telecom[0].value);
           }
           
           var fname = '';
