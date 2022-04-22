@@ -54,6 +54,7 @@
 
         $.when(pt, obv_c).done(function(patient, obv_c) {
 
+          console.log("A")
           console.log(patient);
 
         })
