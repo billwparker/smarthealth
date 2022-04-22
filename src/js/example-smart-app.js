@@ -56,7 +56,7 @@
           var maritalStatus = patient.maritalStatus.text;
           var phoneNumber = patient.telecom[0];
 
-          if (length(phoneNumber) > 0)
+          if (phoneNumber.length > 0)
             phoneNumber = formatPhoneNumber(phoneNumber);
           else
             phoneNumber = ""
