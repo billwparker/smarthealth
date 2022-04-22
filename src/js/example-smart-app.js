@@ -31,30 +31,31 @@
 
         var patient = smart.patient;
         var pt = patient.read();
+
         var obv = smart.patient.api.fetchAll({
-                    type: 'Observation',
-                    query: {
-                      code: {
-                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
-                              'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4', 'http://loinc.org|3141-9',
-                              'http://loinc.org|8867-4', 'http://loinc.org|8310-5', 'http://loinc.org|2160-0',
-                              'http://loinc.org|718-7', 'http://loinc.org|2345-7', 'http://loinc.org|2823-3',
-                              'http://loinc.org|2951-2'
-                            ]
-                      }
-                    }
+          type: 'Observation',
+          query: {
+            code: {
+              $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
+                    'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
+                    'http://loinc.org|2089-1', 'http://loinc.org|55284-4', 'http://loinc.org|3141-9',
+                    'http://loinc.org|8867-4', 'http://loinc.org|8310-5', 'http://loinc.org|2160-0',
+                    'http://loinc.org|718-7', 'http://loinc.org|2345-7', 'http://loinc.org|2823-3',
+                    'http://loinc.org|2951-2'
+                  ]
+            }
+          }
         });
 
         var obv_c = smart.patient.api.fetchAll({
-          type: 'CarePlan',
+          type: 'Observation',
         });
         $.when(pt, obv_c).fail(onError);
 
         $.when(pt, obv_c).done(function(patient, obv_c) {
 
           console.log(patient);
-          
+
         })
 
 
