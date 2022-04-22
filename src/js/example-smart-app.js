@@ -44,7 +44,19 @@
                             ]
                       }
                     }
-                  });
+        });
+
+        var obv_c = smart.patient.api.fetchAll({
+          type: 'CarePlan',
+        });
+        $.when(pt, obv_c).fail(onError);
+
+        $.when(pt, obv_c).done(function(patient, obv_c) {
+
+          console.log(patient);
+          
+        })
+
 
         $.when(pt, obv).fail(onError);
 
