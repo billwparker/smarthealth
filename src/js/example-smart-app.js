@@ -48,11 +48,11 @@
         });
 
         var obv_c = smart.patient.api.fetchAll({
-          type: 'Goal',
+          type: 'CarePlan',
         });
         $.when(pt, obv_c).fail(onError);
 
-        console.log("1")
+        console.log("2")
 
         $.when(pt, obv_c).done(function(patient, obv_c) {
 
