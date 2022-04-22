@@ -59,6 +59,8 @@
           var phoneNumber = ""
 
           if (patient.telecom.length > 0) {
+
+            console.log(patient.telecom)
             phoneNumber = patient.telecom[0].period.value;
           }
           
