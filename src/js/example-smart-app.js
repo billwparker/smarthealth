@@ -55,7 +55,7 @@
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
           var maritalStatus = patient.maritalStatus.text;
-          var phoneNumber = patient.telecom[0];
+          var phoneNumber = patient.telecom[0].period.value;
 
           if (phoneNumber.length > 0)
             phoneNumber = formatPhoneNumber(phoneNumber);
