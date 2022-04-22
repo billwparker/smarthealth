@@ -141,7 +141,7 @@
           }    
         
           
-          Plotly.newPlot('weight-chart', data, layout, {displayModeBar: false});
+          // Plotly.newPlot('weight-chart', data, layout, {displayModeBar: false});
           //--------------------------------------
 
           ret.resolve(p);
