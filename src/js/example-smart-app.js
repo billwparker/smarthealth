@@ -52,7 +52,7 @@
         });
         $.when(pt, obv_c).fail(onError);
 
-        console("1")
+        console.log("1")
 
         $.when(pt, obv_c).done(function(patient, obv_c) {
 
