@@ -48,22 +48,19 @@
 
         $.when(pt, obv).fail(onError);
 
+        console.log(patient);
+
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
           var maritalStatus = patient.maritalStatus.text;
-          var phoneNumber = patient.telecom;
+          var phoneNumber = patient.telecom[0];
 
           if (length(phoneNumber) > 0)
             phoneNumber = formatPhoneNumber(phoneNumber);
           else
             phoneNumber = ""
           
-
-          console.log(patient);
-
-          console.log(maritalStatus);
-
           var fname = '';
           var lname = '';
           var fullname = '';
