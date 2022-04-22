@@ -48,7 +48,7 @@
         });
 
         var obv_c = smart.patient.api.fetchAll({
-          type: 'Observation',
+          type: 'CarePlan',
         });
         $.when(pt, obv_c).fail(onError);
 
