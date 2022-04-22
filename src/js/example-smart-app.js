@@ -50,6 +50,8 @@
 
         $.when(pt, obv).done(function(patient, obv) {
 
+          console.log(smart)
+
           console.log(patient);
 
           var byCodes = smart.byCodes(obv, 'code');
