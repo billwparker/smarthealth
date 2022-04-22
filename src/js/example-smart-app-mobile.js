@@ -112,7 +112,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
-          document.getElementById('greeting').style.display = "block"  
+          // document.getElementById('greeting').style.display = "block"  
           document.getElementById('demo-table').style.display = "block"  
           document.getElementById('main-wait').style.display = "none"  
 
