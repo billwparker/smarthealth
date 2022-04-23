@@ -47,19 +47,19 @@
           }
         });
 
-        var obv_c = smart.patient.api.fetchAll({
-          type: 'CarePlan',
-        });
-        $.when(pt, obv_c).fail(onError);
+        // var obv_c = smart.patient.api.fetchAll({
+        //   type: 'CarePlan',
+        // });
+        // $.when(pt, obv_c).fail(onError);
 
-        console.log("2")
+        // console.log("2")
 
-        $.when(pt, obv_c).done(function(patient, obv_c) {
+        // $.when(pt, obv_c).done(function(patient, obv_c) {
 
-          console.log("B")
-          console.log(patient);
+        //   console.log("B")
+        //   console.log(patient);
 
-        })
+        // })
 
 
         $.when(pt, obv).fail(onError);
