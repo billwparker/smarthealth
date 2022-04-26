@@ -44,29 +44,30 @@
                     'http://loinc.org|2951-2'
                   ]
             },
-            note: 'Annotation'
           }
         });
 
-        // try {
-        //   console.log('try');
-        //   var obv_c = smart.patient.api.fetchAll({
-        //     type: 'CarePlan',
-        //   });
-        //   $.when(pt, obv_c).fail(onError);
+        try {
+          console.log('try');
+          var obv_c = smart.patient.api.fetchAll({
+            type: 'CarePlan',
+            title: "title"
+          });
+          $.when(pt, obv_c).fail(onError);
 
-        //   console.log("2")
+          console.log("2")
 
-        //   $.when(pt, obv_c).done(function(patient, obv_c) {
+          $.when(pt, obv_c).done(function(patient, obv_c) {
 
-        //     console.log("B")
-        //     console.log(patient);
+            print(obv_c);
+            console.log("B")
+            console.log(patient);
 
-        //   })
-        // }
-        // catch(error) {
+          })
+        }
+        catch(error) {
 
-        // }
+        }
 
 
         $.when(pt, obv).fail(onError);
