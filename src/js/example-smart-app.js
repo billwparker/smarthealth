@@ -43,29 +43,30 @@
                     'http://loinc.org|718-7', 'http://loinc.org|2345-7', 'http://loinc.org|2823-3',
                     'http://loinc.org|2951-2'
                   ]
-            }
+            },
+            subject
           }
         });
 
-        try {
-          console.log('try');
-          var obv_c = smart.patient.api.fetchAll({
-            type: 'CarePlan',
-          });
-          $.when(pt, obv_c).fail(onError);
+        // try {
+        //   console.log('try');
+        //   var obv_c = smart.patient.api.fetchAll({
+        //     type: 'CarePlan',
+        //   });
+        //   $.when(pt, obv_c).fail(onError);
 
-          console.log("2")
+        //   console.log("2")
 
-          $.when(pt, obv_c).done(function(patient, obv_c) {
+        //   $.when(pt, obv_c).done(function(patient, obv_c) {
 
-            console.log("B")
-            console.log(patient);
+        //     console.log("B")
+        //     console.log(patient);
 
-          })
-        }
-        catch(error) {
+        //   })
+        // }
+        // catch(error) {
 
-        }
+        // }
 
 
         $.when(pt, obv).fail(onError);
@@ -75,6 +76,8 @@
           console.log(smart)
 
           console.log(patient);
+
+          console.log(obv);
 
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
