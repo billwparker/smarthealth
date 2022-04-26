@@ -44,6 +44,7 @@
                     'http://loinc.org|2951-2'
                   ]
             },
+            note: 'Annotation'
           }
         });
 
